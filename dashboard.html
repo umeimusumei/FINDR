@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINDR | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styledash.css">
+</head>
+<body>
+
+    <header class="navbar-wrapper">
+        <nav class="navbar">
+            <div class="brand">
+                <a href="#home">
+                    <img src="https://www.caintacatholiccollege.edu.ph/wp-content/uploads/2023/09/seal2-1.png" alt="CCC Logo" class="brand-logo">
+                    <span>FINDR</span>
+                </a>
+            </div>
+
+            <ul class="nav-links hide-on-mobile">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#" class="btn-logout">Logout</a></li>
+            </ul>
+
+            <button class="menu-button" onclick="toggleSidebar()" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+    <aside class="sidebar" id="sidebar">
+        <button class="close-button" onclick="toggleSidebar()" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <ul class="sidebar-links">
+            <li><a href="#home" onclick="toggleSidebar()">Home</a></li>
+            <li><a href="#about" onclick="toggleSidebar()">About</a></li>
+            <li><a href="#how-it-works" onclick="toggleSidebar()">How It Works</a></li>
+            <li><a href="#contact" onclick="toggleSidebar()">Contact Us</a></li>
+            <li><a href="#" onclick="toggleSidebar()">Logout</a></li>
+        </ul>
+    </aside>
+
+    <main>
+
+        <section class="hero" id="home">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1 class="hero-title">FINDR</h1>
+                    <h2 class="hero-subtitle">Fast Item Notification, Detection, and Recovery</h2>
+                    <p class="hero-description">
+                        The official lost and found platform for Cainta Catholic College. Report, track, and recover your lost items all in one place.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-dark">
+                            <i class="fa-solid fa-magnifying-glass"></i> Lost Something?
+                        </a>
+                        <a href="#" class="btn btn-yellow">
+                            <i class="fa-solid fa-box-open"></i> Found Something?
+                        </a>
+                        <a href="#" class="btn btn-white">
+                            <i class="fa-regular fa-clipboard"></i> Track My Report
+                        </a>
+                    </div>
+                </div>
+
+                <div class="qr-card">
+                    <div class="qr-code">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://findr.ccc.edu.ph" alt="FINDR QR Code">
+                    </div>
+                    <div class="qr-info">
+                        <h3>Scan. Report.<br>Recover.</h3>
+                        <p>Scan the FINDR QR code around campus to quickly access the system.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works" id="how-it-works">
+            <div class="section-header">
+                <h2 class="section-title">How FINDR Works</h2>
+                <p class="section-desc">A simple 5-step process to get your items back.</p>
+            </div>
+
+            <div class="steps-wrapper">
+                <div class="step-item">
+                    <div class="step-icon-box">
+                        <i class="fa-regular fa-clipboard"></i>
+                        <span class="step-badge">1</span>
+                    </div>
+                    <h3 class="step-title">Report</h3>
+                    <p class="step-text">Submit a lost or found item report.</p>
+                </div>
+
+                <div class="step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+                <div class="step-item">
+                    <div class="step-icon-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span class="step-badge">2</span>
+                    </div>
+                    <h3 class="step-title">Match</h3>
+                    <p class="step-text">The system looks for possible matches.</p>
+                </div>
+
+                <div class="step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+                <div class="step-item">
+                    <div class="step-icon-box">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="step-badge">3</span>
+                    </div>
+                    <h3 class="step-title">Get Notified</h3>
+                    <p class="step-text">Receive real-time updates on your report.</p>
+                </div>
+
+                <div class="step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+                <div class="step-item">
+                    <div class="step-icon-box">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span class="step-badge">4</span>
+                    </div>
+                    <h3 class="step-title">Verify</h3>
+                    <p class="step-text">Confirm ownership with school personnel.</p>
+                </div>
+
+                <div class="step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+                <div class="step-item">
+                    <div class="step-icon-box">
+                        <i class="fa-solid fa-box-archive"></i>
+                        <span class="step-badge">5</span>
+                    </div>
+                    <h3 class="step-title">Claim</h3>
+                    <p class="step-text">Safely retrieve your lost item.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="https://www.caintacatholiccollege.edu.ph/wp-content/uploads/2023/09/seal2-1.png" alt="CCC Crest">
+                <div class="footer-brand-text">
+                    <strong>CAINTA CATHOLIC COLLEGE</strong>
+                    <span>Christ's Faithful in Communion and Mission</span>
+                </div>
+            </div>
+
+            <ul class="footer-links">
+                <li><a href="#about">About FINDR</a></li>
+                <li><a href="#privacy-policy">Privacy Policy</a></li>
+                <li><a href="#terms-of-use">Terms of Use</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
